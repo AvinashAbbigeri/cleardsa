@@ -1,0 +1,148 @@
+/* MAIN LAYOUT */
+.problem-page {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  gap: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* ------------------------------------------ */
+/* DESKTOP LEFT NAVIGATION */
+/* ------------------------------------------ */
+
+.side-nav {
+  position: sticky;
+  top: 80px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  width: 150px;
+}
+
+.side-nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 1rem;
+  opacity: 0.8;
+  padding: 6px 0;
+  border-left: 3px solid transparent;
+  transition: 0.2s ease;
+}
+
+.side-nav a:hover {
+  opacity: 1;
+  color: var(--accent);
+  border-left: 3px solid var(--accent);
+}
+
+/* ------------------------------------------ */
+/* MOBILE TOP NAVIGATION */
+/* ------------------------------------------ */
+
+.mobile-nav {
+  display: none;
+  position: sticky;
+  top: 60px;
+  background: var(--bg);
+  padding: 0.7rem 1rem;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  z-index: 90;
+  justify-content: space-between;
+}
+
+.mobile-nav a {
+  color: var(--text);
+  text-decoration: none;
+  opacity: 0.9;
+  font-size: 1rem;
+  padding: 4px;
+}
+
+.mobile-nav a:hover {
+  color: var(--accent);
+  opacity: 1;
+}
+
+/* ------------------------------------------ */
+/* CONTENT */
+/* ------------------------------------------ */
+
+.content {
+  flex: 1;
+  max-width: 800px;
+}
+
+.section-block {
+  margin-bottom: 3rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.desc {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: var(--text);
+  opacity: 0.9;
+}
+
+pre {
+  background: rgba(100,100,100,0.1);
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin-top: 1rem;
+}
+
+/* ------------------------------------------ */
+/* RESPONSIVE DESIGN */
+/* ------------------------------------------ */
+@media (max-width: 900px) {
+
+  .problem-page {
+    padding: 1.5rem 1rem;
+    gap: 1.5rem;
+  }
+
+  .side-nav {
+    width: 120px;
+  }
+}
+
+@media (max-width: 700px) {
+
+  .problem-page {
+    flex-direction: column;
+    padding-top: 1rem;
+  }
+
+  .side-nav {
+    display: none;  /* Hide left nav */
+  }
+
+  .mobile-nav {
+    display: flex;  /* Show top nav */
+  }
+
+  .content {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+
+  .mobile-nav a {
+    font-size: 0.85rem;
+  }
+
+  .title {
+    font-size: 1.6rem;
+  }
+}

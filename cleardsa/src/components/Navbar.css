@@ -65,11 +65,7 @@
 @media (max-width: 700px) {
 
   .nav-inner {
-    justify-content: space-between;
-  }
-
-  .nav-links {
-    display: none; /* Hide full menu for now (you can add mobile menu later) */
+    justify-content: space-around;
   }
 
   .nav-logo {
@@ -79,4 +75,18 @@
   .navbar {
     padding: 0 1rem;
   }
+
+  .nav-links {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.nav-link {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 1rem;
+  opacity: 0.9;
+  transition: 0.2s ease;
+}
+
 }

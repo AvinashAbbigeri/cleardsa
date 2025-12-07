@@ -1,0 +1,62 @@
+/* Page wrapper */
+.algo-page {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+/* Centered content container */
+.algo-content {
+  max-width: 800px;     /* Perfect reading width */
+  width: 100%;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+}
+
+/* Title */
+.algo-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+/* Description */
+.algo-desc {
+  font-size: 1.15rem;
+  color: var(--text);
+  opacity: 0.9;
+  margin-bottom: 2rem;
+}
+
+/* Section headings */
+.algo-heading {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 0.8rem;
+  color: var(--accent-secondary);
+}
+
+/* Code blocks */
+pre {
+  background: rgba(100,100,100,0.1);
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+/* SMALL SCREENS */
+@media (max-width: 600px) {
+
+  .algo-title {
+    font-size: 2rem;
+  }
+
+  .algo-heading {
+    font-size: 1.2rem;
+  }
+}
