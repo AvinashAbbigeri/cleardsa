@@ -1,0 +1,43 @@
+/* For code blocks
+code, pre {
+  font-family: 'JetBrains Mono', monospace;
+} */
+
+/* Default Light Mode */
+:root {
+    --bg: #ffffff;
+    --text: #000000;
+
+    /* Accent colors */
+    --accent: #6366F1;
+    /* Indigo */
+    --accent-secondary: #22D3EE;
+    /* Cyan */
+}
+
+/* Dark Mode */
+.dark {
+    --bg: #000000;
+    --text: #ffffff;
+
+    --accent: #818CF8;
+    /* Lighter Indigo */
+    --accent-secondary: #67E8F9;
+    /* Lighter Cyan */
+}
+
+/* Apply theme values globally */
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
