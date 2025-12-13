@@ -7,8 +7,11 @@ import './App.css';
 import './index.css'
 
 import ProblemPage from './pages/ProblemPage.jsx'
-import AlgorithmsPage from "./pages/AlgorithmsPage.jsx";
-import TopicsPage from "./pages/TopicsPage.jsx";
+import TopicPage from "./pages/TopicPage.jsx";
+import ProblemsListPage from "./pages/ProblemsListPage.jsx";
+import TopicsListPage from "./pages/TopicsPageList.jsx";
+import AlgorithmsListPage from "./pages/AlgorithmsListPage.jsx";
+import AlgorithmPage from "./pages/AlgorithmPage.jsx";
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -16,10 +19,13 @@ createRoot(document.getElementById('root')).render(
       <Routes>
 
         <Route path="/" element={<App />} />
-        <Route path="/problems" element={<ProblemPage />} />
-        <Route path="/algorithms" element={<AlgorithmsPage />} />
-        <Route path="/topics" element={<TopicsPage />} />
-
+        <Route path="/problems" element={<ProblemsListPage />} />
+        <Route path="/problems/:id" element={<ProblemPage />} />
+        <Route path="/topics" element={<TopicsListPage />} />
+        <Route path="/topics/:topicId" element={<TopicPage />} />
+        <Route path="/algorithms" element={<AlgorithmsListPage />} />
+        <Route path="/algorithms/:algorithmId" element={<AlgorithmPage />} />
+      
       </Routes>
     </BrowserRouter>
   </StrictMode>,

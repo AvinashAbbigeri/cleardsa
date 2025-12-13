@@ -41,3 +41,11 @@ html, body {
   overflow-x: hidden;
   width: 100%;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+.dark pre {
+  background: rgba(255,255,255,0.08);
+}

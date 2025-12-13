@@ -1,0 +1,48 @@
+.topic-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  min-height: calc(100vh - 140px);
+}
+
+.topic-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.topic-desc {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+}
+
+section {
+  margin-bottom: 2.5rem;
+}
+
+section h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+  color: var(--accent-secondary);
+}
+
+.topic-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.topic-list li {
+  margin-bottom: 0.6rem;
+}
+
+.topic-list a {
+  text-decoration: none;
+  color: var(--text);
+  transition: 0.2s ease;
+}
+
+.topic-list a:hover {
+  color: var(--accent);
+}
