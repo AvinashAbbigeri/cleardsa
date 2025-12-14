@@ -6,6 +6,19 @@ import problemsData from "../data/problemsData";
 import "./ProblemPage.css";
 import CodeBlock from "../components/CodeBlock";
 
+<Helmet>
+  <title>{problem.title} — ClearDSA</title>
+  <meta
+    name="description"
+    content={`Learn ${problem.title} with clear explanation, examples, and code. Understand the intuition behind the solution.`}
+  />
+  <meta property="og:title" content="ClearDSA" />
+  <meta property="og:description" content="DSA made simple, understand the Why." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://cleardsa.com" />
+
+</Helmet>
+
 export default function ProblemPage() {
   const { id } = useParams();
   const problem = problemsData[id];
@@ -81,13 +94,14 @@ export default function ProblemPage() {
           </section>
 
           <section id="examples" className="section-block">
-            <h2>Examples</h2>  
-            <CodeBlock code={problem.code} language="python" />
+            <h2>Examples</h2>
+            <pre>{problem.examples}</pre>
           </section>
+
 
           <section id="code" className="section-block">
             <h2>Code</h2>
-              <CodeBlock code={problem.code} language="python" />
+            <CodeBlock code={problem.code} language="python" />
           </section>
 
           <section id="explanation" className="section-block">

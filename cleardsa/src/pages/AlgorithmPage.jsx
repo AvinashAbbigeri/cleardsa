@@ -5,6 +5,21 @@ import algorithmsData from "../data/algorithmsData";
 import "./AlgorithmPage.css";
 import CodeBlock from "../components/CodeBlock";
 
+<Helmet>
+  <title>{algo.title} Algorithm — ClearDSA</title>
+  <meta
+    name="description"
+    content={`Understand the ${algo.title} algorithm step by step with explanation and code.`}
+  />
+  <meta property="og:title" content="ClearDSA" />
+  <meta property="og:description" content="DSA made simple, understand the Why." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://cleardsa.com" />
+
+</Helmet>
+
+
+
 export default function AlgorithmPage() {
   const { algorithmId } = useParams();
   const algo = algorithmsData[algorithmId];
@@ -41,7 +56,7 @@ export default function AlgorithmPage() {
 
         <section>
           <h2>Code</h2>
-            <CodeBlock code={algo.code} language="python" />
+          <CodeBlock code={algo.code} language="python" />
         </section>
 
         <section>

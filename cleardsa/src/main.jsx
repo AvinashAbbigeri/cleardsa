@@ -13,21 +13,23 @@ import TopicsListPage from "./pages/TopicsPageList.jsx";
 import AlgorithmsListPage from "./pages/AlgorithmsListPage.jsx";
 import AlgorithmPage from "./pages/AlgorithmPage.jsx";
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <BrowserRouter>
-      <Routes>
+import { HelmetProvider } from "react-helmet-async";
 
-        <Route path="/" element={<App />} />
-        <Route path="/problems" element={<ProblemsListPage />} />
-        <Route path="/problems/:id" element={<ProblemPage />} />
-        <Route path="/topics" element={<TopicsListPage />} />
-        <Route path="/topics/:topicId" element={<TopicPage />} />
-        <Route path="/algorithms" element={<AlgorithmsListPage />} />
-        <Route path="/algorithms/:algorithmId" element={<AlgorithmPage />} />
-      
-      </Routes>
-    </BrowserRouter>
-  </StrictMode>,
-)
+createRoot(document.getElementById("root")).render(
+  <StrictMode>
+    <HelmetProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<App />} />
+          <Route path="/problems" element={<ProblemsListPage />} />
+          <Route path="/problems/:id" element={<ProblemPage />} />
+          <Route path="/topics" element={<TopicsListPage />} />
+          <Route path="/topics/:topicId" element={<TopicPage />} />
+          <Route path="/algorithms" element={<AlgorithmsListPage />} />
+          <Route path="/algorithms/:algorithmId" element={<AlgorithmPage />} />
+        </Routes>
+      </BrowserRouter>
+    </HelmetProvider>
+  </StrictMode>
+);
 
