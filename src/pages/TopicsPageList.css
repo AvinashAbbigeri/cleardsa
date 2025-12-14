@@ -1,0 +1,67 @@
+/* PAGE WRAPPER */
+.topics-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  min-height: calc(100vh - 140px); /* navbar + footer */
+  box-sizing: border-box;
+}
+
+/* TITLE */
+.topics-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 2rem;
+}
+
+/* GRID LIST */
+.topics-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+/* TOPIC CARD */
+.topic-card {
+  display: block;
+  padding: 1.4rem 1.5rem;
+  border-radius: 14px;
+  background: var(--bg);
+  border: 1px solid rgba(0,0,0,0.15);
+  text-decoration: none;
+  color: var(--text);
+  transition: 0.25s ease;
+}
+
+.topic-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-4px);
+}
+
+/* CARD TITLE */
+.topic-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  color: var(--text);
+}
+
+/* CARD DESCRIPTION */
+.topic-card p {
+  font-size: 0.95rem;
+  opacity: 0.8;
+  line-height: 1.5;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .topics-title {
+    font-size: 1.7rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .topic-card {
+    padding: 1.2rem;
+  }
+}

@@ -1,0 +1,136 @@
+/* MAIN WRAPPER */
+.problems-page {
+  max-width: 800px;          /* was 900px — 800 looks more balanced */
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* TITLE */
+.problems-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+  text-align: left;          /* FIX: no awkward centering */
+}
+
+/* LIST WRAPPER */
+.problems-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  width: 100%;
+  min-height: calc(100vh - 140px); /* Navbar + Footer space */
+  box-sizing: border-box;
+}
+
+/* PROBLEM CARD */
+.problem-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.1rem 1.3rem;
+  border: 1px solid rgba(0,0,0,0.15);
+  border-radius: 12px;
+  text-decoration: none;
+  color: var(--text);
+  background: var(--bg);
+  transition: 0.2s ease;
+  width: 100%;
+  box-sizing: border-box;
+  height: 100%;
+
+  /* FIX: no overflow, no weird width issues */
+  max-width: 100%;
+}
+
+.problem-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-3px);
+}
+
+/* LEFT SECTION */
+.p-left h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.3rem;
+}
+
+.topic {
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+/* DIFFICULTY BADGE */
+.difficulty {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  white-space: nowrap;         /* FIX: prevent wrapping */
+}
+
+/* COLORS */
+.easy {
+  background: rgba(16,185,129,0.17);
+  color: rgb(16,185,129);
+}
+
+.medium {
+  background: rgba(245,158,11,0.2);
+  color: rgb(245,158,11);
+}
+
+.hard {
+  background: rgba(239,68,68,0.2);
+  color: rgb(239,68,68);
+}
+
+/* MOBILE FIXES */
+@media (max-width: 600px) {
+  .problem-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.7rem;
+    padding: 1rem;
+  }
+
+  .difficulty {
+    align-self: flex-start;   /* FIX: badge now aligns logically */
+  }
+
+  .problems-title {
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+  }
+}
+.search-input {
+  width: 100%;
+  padding: 0.7rem 0.9rem;
+  border-radius: 10px;
+  border: 1px solid rgba(0,0,0,0.2);
+  margin-bottom: 1rem;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.filters {
+  display: flex;
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
+}
+
+.filters button {
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(0,0,0,0.2);
+  background: transparent;
+  cursor: pointer;
+  color: var(--text);
+}
+
+.filters button.active {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}

@@ -1,0 +1,28 @@
+.algorithm-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  min-height: calc(100vh - 140px);
+}
+
+.algorithm-title {
+  font-size: 2.2rem;
+  color: var(--accent);
+  margin-bottom: 0.6rem;
+}
+
+.algorithm-desc {
+  opacity: 0.9;
+  margin-bottom: 2rem;
+}
+
+section {
+  margin-bottom: 2.5rem;
+}
+
+pre {
+  background: rgba(100,100,100,0.1);
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+}
