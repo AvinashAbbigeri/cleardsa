@@ -1,11 +1,10 @@
+import { NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
-import './Navbar.css';
+import "./Navbar.css";
 
 export default function Navbar() {
-
   const [theme, setTheme] = useState("light");
 
-  // Load saved theme on startup
   useEffect(() => {
     const saved = localStorage.getItem("theme");
     if (saved === "dark") {
@@ -14,7 +13,6 @@ export default function Navbar() {
     }
   }, []);
 
-  // Toggle function
   const toggleTheme = () => {
     if (theme === "light") {
       document.documentElement.classList.add("dark");
@@ -31,21 +29,25 @@ export default function Navbar() {
     <nav className="navbar">
       <div className="nav-inner">
 
-        <div className="nav-left">
-          <a href="/" className="nav-logo">ClearDSA</a>
-        </div>
+        <NavLink to="/" className="nav-logo">
+          ClearDSA
+        </NavLink>
 
         <div className="nav-links">
-          <a href="/problems" className="nav-link">Problems</a>
-          <a href="/algorithms" className="nav-link">Algorithms</a>
-          <a href="/topics" className="nav-link">Topics</a>
+          <NavLink to="/problems" className="nav-link">
+            Problems
+          </NavLink>
+          <NavLink to="/algorithms" className="nav-link">
+            Algorithms
+          </NavLink>
+          <NavLink to="/topics" className="nav-link">
+            Topics
+          </NavLink>
         </div>
 
-        <div className="nav-right">
-          <button className="theme-toggle" onClick={toggleTheme}>
-            {theme === "light" ? "🌙" : "☀️"}
-          </button>
-        </div>
+        <button className="theme-toggle" onClick={toggleTheme}>
+          {theme === "light" ? "🌙" : "☀️"}
+        </button>
 
       </div>
     </nav>

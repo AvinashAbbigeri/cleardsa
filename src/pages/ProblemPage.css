@@ -1,17 +1,16 @@
-/* MAIN LAYOUT */
 .problem-page {
   display: flex;
+  flex-direction: row;
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem 1rem;
   gap: 2rem;
   width: 100%;
   box-sizing: border-box;
-}
 
-/* ------------------------------------------ */
-/* DESKTOP LEFT NAVIGATION */
-/* ------------------------------------------ */
+  /* FIX: Ensure footer stays at bottom */
+  min-height: calc(100vh - 140px);
+}
 
 .side-nav {
   position: sticky;
@@ -39,10 +38,6 @@
   border-left: 3px solid var(--accent);
 }
 
-/* ------------------------------------------ */
-/* MOBILE TOP NAVIGATION */
-/* ------------------------------------------ */
-
 .mobile-nav {
   display: none;
   position: sticky;
@@ -67,10 +62,6 @@
   opacity: 1;
 }
 
-/* ------------------------------------------ */
-/* CONTENT */
-/* ------------------------------------------ */
-
 .content {
   flex: 1;
   max-width: 800px;
@@ -93,6 +84,18 @@
   opacity: 0.9;
 }
 
+.side-nav a.active,
+.mobile-nav a.active {
+  color: var(--accent);
+  font-weight: 600;
+  border-left: 3px solid var(--accent);
+  opacity: 1;
+}
+
+.mobile-nav a.active {
+  border-bottom: 2px solid var(--accent);
+}
+
 pre {
   background: rgba(100,100,100,0.1);
   padding: 1rem;
@@ -101,9 +104,6 @@ pre {
   margin-top: 1rem;
 }
 
-/* ------------------------------------------ */
-/* RESPONSIVE DESIGN */
-/* ------------------------------------------ */
 @media (max-width: 900px) {
 
   .problem-page {
